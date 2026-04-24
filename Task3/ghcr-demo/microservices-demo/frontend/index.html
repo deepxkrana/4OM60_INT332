@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Microservices Demo</h1>
+<button onclick="loadData()">Get Data</button>
+<p id="output"></p>
+<script>
+function loadData() {
+    fetch('http://localhost:3000/')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("output").innerText = data;
+        });
+}
+</script>
+</body>
+</html> 
